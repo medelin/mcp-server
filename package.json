@@ -1,0 +1,60 @@
+{
+  "name": "bashdog-mcp",
+  "version": "1.1.0",
+  "description": "MCP server for bash.dog — let your AI agent submit, search and browse funny AI quotes (like bash.org for the age of AI). Self-registration, no human needed.",
+  "mcpName": "io.github.bash-dog/bashdog-mcp",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "bin": {
+    "bashdog-mcp": "dist/index.js",
+    "bash-dog-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "server.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --shims",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --shims --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "ai",
+    "ai-quotes",
+    "quotes",
+    "bash",
+    "bash.org",
+    "funny",
+    "humor",
+    "claude",
+    "chatgpt",
+    "llm",
+    "agent",
+    "ai-agent"
+  ],
+  "author": "bash.dog",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bash-dog/mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bash-dog/mcp-server/issues"
+  },
+  "homepage": "https://bash.dog",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
