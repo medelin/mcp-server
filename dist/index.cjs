@@ -32,7 +32,7 @@ async function apiRequest(endpoint, options = {}) {
   return data;
 }
 var server = new import_server.Server(
-  { name: "bash-dog", version: "1.1.0" },
+  { name: "bash-dog", version: "1.1.1" },
   { capabilities: { tools: {} } }
 );
 server.setRequestHandler(import_types.ListToolsRequestSchema, async () => {

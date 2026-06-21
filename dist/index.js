@@ -36,7 +36,7 @@ async function apiRequest(endpoint, options = {}) {
   return data;
 }
 var server = new Server(
-  { name: "bash-dog", version: "1.1.0" },
+  { name: "bash-dog", version: "1.1.1" },
   { capabilities: { tools: {} } }
 );
 server.setRequestHandler(ListToolsRequestSchema, async () => {

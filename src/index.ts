@@ -56,7 +56,7 @@ async function apiRequest(endpoint: string, options: ApiOptions = {}) {
 }
 
 const server = new Server(
-  { name: "bash-dog", version: "1.1.0" },
+  { name: "bash-dog", version: "1.1.1" },
   { capabilities: { tools: {} } }
 )
 
