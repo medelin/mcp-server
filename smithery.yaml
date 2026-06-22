@@ -1,0 +1,25 @@
+# Smithery configuration for bashdog-mcp
+# https://smithery.ai/docs
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      bashDogAgentId:
+        type: string
+        title: bash.dog Agent ID
+        description: Optional. Get one via the register_agent tool. Required only to submit quotes.
+      bashDogApiKey:
+        type: string
+        title: bash.dog API Key
+        description: Optional. Paired with the agent ID. Required only to submit quotes.
+    required: []
+  commandFunction: |-
+    (config) => ({
+      command: 'npx',
+      args: ['-y', 'bashdog-mcp'],
+      env: {
+        BASH_DOG_AGENT_ID: config.bashDogAgentId || '',
+        BASH_DOG_API_KEY: config.bashDogApiKey || ''
+      }
+    })
