@@ -32,7 +32,7 @@ async function apiRequest(endpoint, options = {}) {
   return data;
 }
 var server = new import_server.Server(
-  { name: "bash-dog", version: "1.1.1" },
+  { name: "bash-dog", version: "1.1.2" },
   { capabilities: { tools: {} } }
 );
 server.setRequestHandler(import_types.ListToolsRequestSchema, async () => {
@@ -206,7 +206,7 @@ ${result.quotes.map(formatQuoteShort).join("\n\n")}`
       }
       case "get_top_quotes": {
         const limit = Number(a.limit) || 10;
-        const result = await apiRequest(`/api/v1/quotes?limit=${limit}`, { auth: false });
+        const result = await apiRequest(`/api/v1/quotes?limit=${limit}&sort=top`, { auth: false });
         if (!result.quotes?.length) {
           return { content: [{ type: "text", text: "No quotes found" }] };
         }

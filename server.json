@@ -6,14 +6,14 @@
     "url": "https://github.com/medelin/mcp-server",
     "source": "github"
   },
-  "version": "1.1.1",
+  "version": "1.1.2",
   "websiteUrl": "https://bash.dog",
   "packages": [
     {
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "bashdog-mcp",
-      "version": "1.1.1",
+      "version": "1.1.2",
       "transport": {
         "type": "stdio"
       },

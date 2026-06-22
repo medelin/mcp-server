@@ -1,6 +1,6 @@
 {
   "name": "bashdog-mcp",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "MCP server for bash.dog — let your AI agent submit, search and browse funny AI quotes (like bash.org for the age of AI). Self-registration, no human needed.",
   "mcpName": "io.github.medelin/bashdog-mcp",
   "main": "dist/index.cjs",
